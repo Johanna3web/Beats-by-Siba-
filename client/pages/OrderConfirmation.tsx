@@ -175,24 +175,24 @@ export default function OrderConfirmation() {
                 <div className="border-t border-luxury-beige mt-8 pt-8">
                   <div className="flex justify-between mb-4">
                     <span className="text-foreground/70">Subtotal</span>
-                    <span className="font-semibold">${order.subtotal.toFixed(2)}</span>
+                    <span className="font-semibold">R{order.subtotal.toLocaleString()}</span>
                   </div>
                   <div className="flex justify-between mb-4">
                     <span className="text-foreground/70">Shipping</span>
                     <span className={order.shippingCost === 0 ? "text-luxury-gold font-semibold" : "font-semibold"}>
                       {order.shippingCost === 0
                         ? "Free"
-                        : `$${order.shippingCost.toFixed(2)}`}
+                        : `R${order.shippingCost.toLocaleString()}`}
                     </span>
                   </div>
                   <div className="flex justify-between mb-6 pb-6 border-b border-luxury-beige">
                     <span className="text-foreground/70">Tax</span>
-                    <span className="font-semibold">${order.tax.toFixed(2)}</span>
+                    <span className="font-semibold">R{Math.round(order.tax).toLocaleString()}</span>
                   </div>
                   <div className="flex justify-between text-lg">
                     <span className="font-bold text-foreground">Total</span>
                     <span className="font-bold text-luxury-gold">
-                      ${order.total.toFixed(2)}
+                      R{Math.round(order.total).toLocaleString()}
                     </span>
                   </div>
                 </div>

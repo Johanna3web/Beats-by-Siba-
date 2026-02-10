@@ -145,27 +145,27 @@ export default function Cart() {
                   <div className="space-y-4 mb-6">
                     <div className="flex justify-between text-foreground/70">
                       <span>Subtotal</span>
-                      <span>${subtotal.toFixed(2)}</span>
+                      <span>R{subtotal.toLocaleString()}</span>
                     </div>
                     <div className="flex justify-between text-foreground/70">
                       <span>Shipping</span>
-                      <span className={subtotal > 100 ? "text-luxury-gold" : ""}>
-                        {subtotal > 100 ? "Free" : `$${shippingCost.toFixed(2)}`}
+                      <span className={subtotal > 500 ? "text-luxury-gold" : ""}>
+                        {subtotal > 500 ? "Free" : `R${shippingCost.toLocaleString()}`}
                       </span>
                     </div>
-                    {subtotal > 100 && (
+                    {subtotal > 500 && (
                       <p className="text-sm text-luxury-gold">
-                        ✓ Free shipping on orders over $100!
+                        ✓ Free shipping on orders over R500!
                       </p>
                     )}
                     <div className="flex justify-between text-foreground/70">
                       <span>Tax</span>
-                      <span>${tax.toFixed(2)}</span>
+                      <span>R{tax.toLocaleString()}</span>
                     </div>
                     <div className="border-t border-luxury-beige pt-4 flex justify-between text-lg font-bold text-foreground">
                       <span>Total</span>
                       <span className="text-luxury-gold">
-                        ${total.toFixed(2)}
+                        R{Math.round(total).toLocaleString()}
                       </span>
                     </div>
                   </div>

@@ -18,7 +18,7 @@ export async function sendOrderConfirmationEmail(
       <tr style="border-bottom: 1px solid #e0e0e0;">
         <td style="padding: 12px 0; text-align: left;">${item.name}</td>
         <td style="padding: 12px 0; text-align: center;">x${item.quantity}</td>
-        <td style="padding: 12px 0; text-align: right;">$${(item.price * item.quantity).toFixed(2)}</td>
+        <td style="padding: 12px 0; text-align: right;">R${(item.price * item.quantity).toLocaleString()}</td>
       </tr>
     `
       )

@@ -26,13 +26,16 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/shop" element={<Placeholder pageName="Shop" />} />
-          <Route path="/product/:id" element={<Placeholder pageName="Product Details" />} />
+          <Route path="/shop" element={<Shop />} />
+          <Route path="/product/:id" element={<Product />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/order-confirmation/:orderNumber" element={<OrderConfirmation />} />
+          <Route path="/track-order/:orderNumber" element={<OrderTracking />} />
           <Route path="/about" element={<Placeholder pageName="About Us" />} />
           <Route path="/hair-care" element={<Placeholder pageName="Hair Care Guide" />} />
           <Route path="/faqs" element={<Placeholder pageName="FAQs" />} />
           <Route path="/contact" element={<Placeholder pageName="Contact" />} />
-          <Route path="/cart" element={<Placeholder pageName="Shopping Cart" />} />
           <Route path="/privacy" element={<Placeholder pageName="Privacy Policy" />} />
           <Route path="/terms" element={<Placeholder pageName="Terms of Service" />} />
           <Route path="/shipping-returns" element={<Placeholder pageName="Shipping & Returns" />} />

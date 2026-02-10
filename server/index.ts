@@ -2,6 +2,12 @@ import "dotenv/config";
 import express from "express";
 import cors from "cors";
 import { handleDemo } from "./routes/demo";
+import { handleCheckout } from "./routes/checkout";
+import {
+  handleConfirmPayment,
+  handleGetOrder,
+  handleGetOrderTracking,
+} from "./routes/orders";
 
 export function createServer() {
   const app = express();
@@ -18,6 +24,14 @@ export function createServer() {
   });
 
   app.get("/api/demo", handleDemo);
+
+  // Payment routes
+  app.post("/api/checkout", handleCheckout);
+  app.post("/api/confirm-payment", handleConfirmPayment);
+
+  // Order routes
+  app.get("/api/orders/:orderNumber", handleGetOrder);
+  app.get("/api/orders/:orderNumber/tracking", handleGetOrderTracking);
 
   return app;
 }

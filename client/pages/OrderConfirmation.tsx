@@ -164,7 +164,7 @@ export default function OrderConfirmation() {
                           <td className="py-4 text-foreground">{item.name}</td>
                           <td className="py-4 text-center">{item.quantity}</td>
                           <td className="py-4 text-right font-semibold">
-                            ${(item.price * item.quantity).toFixed(2)}
+                            R{(item.price * item.quantity).toLocaleString()}
                           </td>
                         </tr>
                       ))}

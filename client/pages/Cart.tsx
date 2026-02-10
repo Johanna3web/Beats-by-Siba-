@@ -47,7 +47,7 @@ export default function Cart() {
     0
   );
 
-  const shippingCost = subtotal > 0 ? (subtotal > 100 ? 0 : 15) : 0;
+  const shippingCost = subtotal > 0 ? (subtotal > 500 ? 0 : 50) : 0;
   const tax = subtotal * 0.08;
   const total = subtotal + shippingCost + tax;
 

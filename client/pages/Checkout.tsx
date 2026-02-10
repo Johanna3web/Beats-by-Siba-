@@ -50,8 +50,8 @@ export default function Checkout() {
     (sum, item) => sum + item.price * item.quantity,
     0
   );
-  const shippingCost = subtotal > 100 ? 0 : 15;
-  const tax = subtotal * 0.08;
+  const shippingCost = subtotal > 500 ? 0 : 50;
+  const tax = subtotal * 0.15;
   const total = subtotal + shippingCost + tax;
 
   const onSubmit = async (shippingAddress: ShippingAddress) => {

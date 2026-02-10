@@ -362,7 +362,7 @@ export default function Checkout() {
                       <span>
                         {item.name} x{item.quantity}
                       </span>
-                      <span>${(item.price * item.quantity).toFixed(2)}</span>
+                      <span>R{(item.price * item.quantity).toLocaleString()}</span>
                     </div>
                   ))}
                 </div>
@@ -370,21 +370,21 @@ export default function Checkout() {
                 <div className="space-y-3 border-t border-luxury-beige pt-4">
                   <div className="flex justify-between text-foreground/70">
                     <span>Subtotal</span>
-                    <span>${subtotal.toFixed(2)}</span>
+                    <span>R{subtotal.toLocaleString()}</span>
                   </div>
                   <div className="flex justify-between text-foreground/70">
                     <span>Shipping</span>
                     <span className={shippingCost === 0 ? "text-luxury-gold" : ""}>
-                      {shippingCost === 0 ? "Free" : `$${shippingCost.toFixed(2)}`}
+                      {shippingCost === 0 ? "Free" : `R${shippingCost.toLocaleString()}`}
                     </span>
                   </div>
                   <div className="flex justify-between text-foreground/70">
                     <span>Tax</span>
-                    <span>${tax.toFixed(2)}</span>
+                    <span>R{Math.round(tax).toLocaleString()}</span>
                   </div>
                   <div className="flex justify-between text-lg font-bold text-foreground pt-3 border-t border-luxury-beige">
                     <span>Total</span>
-                    <span className="text-luxury-gold">${total.toFixed(2)}</span>
+                    <span className="text-luxury-gold">R{Math.round(total).toLocaleString()}</span>
                   </div>
                 </div>
               </div>

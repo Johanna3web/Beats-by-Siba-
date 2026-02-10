@@ -141,11 +141,11 @@ export default function HairCareGuide() {
             </h2>
             <p className="text-foreground/70 leading-relaxed">
               Your premium human hair is an investment in your confidence and
-              style. Proper care ensures your hair stays soft, shiny, and durable
-              for months to come. The difference between hair that lasts 3 months
-              and 12 months comes down to care and maintenance. Follow these
-              expert tips to maximize the lifespan of your Beats by Siba hair and
-              keep it looking flawless.
+              style. Proper care ensures your hair stays soft, shiny, and
+              durable for months to come. The difference between hair that lasts
+              3 months and 12 months comes down to care and maintenance. Follow
+              these expert tips to maximize the lifespan of your Beats by Siba
+              hair and keep it looking flawless.
             </p>
           </div>
 
@@ -270,8 +270,8 @@ export default function HairCareGuide() {
               Questions About Hair Care?
             </h2>
             <p className="text-foreground/70 mb-6">
-              Our team is here to help you get the most out of your Beats by Siba
-              hair. Reach out anytime!
+              Our team is here to help you get the most out of your Beats by
+              Siba hair. Reach out anytime!
             </p>
             <a
               href="/contact"

@@ -121,7 +121,7 @@ export default function Shop() {
     const cartItems = existingCart ? JSON.parse(existingCart) : [];
 
     const existingItemIndex = cartItems.findIndex(
-      (item: CartItem) => item.id === product.id
+      (item: CartItem) => item.id === product.id,
     );
 
     if (existingItemIndex > -1) {

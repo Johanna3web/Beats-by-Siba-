@@ -14,9 +14,9 @@ interface ContactFormData {
 
 export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">(
-    "idle"
-  );
+  const [submitStatus, setSubmitStatus] = useState<
+    "idle" | "success" | "error"
+  >("idle");
   const {
     register,
     handleSubmit,
@@ -185,7 +185,9 @@ export default function Contact() {
                     Subject *
                   </label>
                   <select
-                    {...register("subject", { required: "Subject is required" })}
+                    {...register("subject", {
+                      required: "Subject is required",
+                    })}
                     className="w-full px-4 py-3 border border-foreground/20 focus:outline-none focus:ring-2 focus:ring-luxury-gold"
                   >
                     <option value="">Select a subject</option>
@@ -231,8 +233,8 @@ export default function Contact() {
                 {submitStatus === "success" && (
                   <div className="p-4 bg-green-50 border border-green-200 rounded">
                     <p className="text-green-800 text-sm">
-                      ✓ Thank you! Your message has been sent successfully. We'll
-                      get back to you within 24 hours.
+                      ✓ Thank you! Your message has been sent successfully.
+                      We'll get back to you within 24 hours.
                     </p>
                   </div>
                 )}
@@ -240,7 +242,8 @@ export default function Contact() {
                 {submitStatus === "error" && (
                   <div className="p-4 bg-red-50 border border-red-200 rounded">
                     <p className="text-red-800 text-sm">
-                      ✗ Something went wrong. Please try again or contact us directly.
+                      ✗ Something went wrong. Please try again or contact us
+                      directly.
                     </p>
                   </div>
                 )}

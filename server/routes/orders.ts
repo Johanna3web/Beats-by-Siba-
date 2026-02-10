@@ -5,7 +5,12 @@ import {
   Order,
   OrderTracking,
 } from "@shared/api";
-import { generateOrderNumber, getOrCreateOrdersFile, saveOrder, getOrder } from "../utils/orders";
+import {
+  generateOrderNumber,
+  getOrCreateOrdersFile,
+  saveOrder,
+  getOrder,
+} from "../utils/orders";
 import { sendOrderConfirmationEmail } from "../utils/email";
 
 // Confirm payment and create order
@@ -93,7 +98,7 @@ export const handleGetOrderTracking: RequestHandler = async (req, res) => {
       status: order.status,
       trackingNumber: order.trackingNumber,
       estimatedDelivery: new Date(
-        Date.now() + 7 * 24 * 60 * 60 * 1000
+        Date.now() + 7 * 24 * 60 * 60 * 1000,
       ).toISOString(),
       currentLocation: "In Transit",
       updates: [
@@ -108,7 +113,7 @@ export const handleGetOrderTracking: RequestHandler = async (req, res) => {
                 status: "shipped" as const,
                 message: "Package shipped",
                 timestamp: new Date(
-                  Date.now() - 2 * 24 * 60 * 60 * 1000
+                  Date.now() - 2 * 24 * 60 * 60 * 1000,
                 ).toISOString(),
               },
             ]

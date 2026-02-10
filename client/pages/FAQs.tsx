@@ -195,8 +195,8 @@ export default function FAQs() {
               Didn't Find Your Answer?
             </h2>
             <p className="text-foreground/70 mb-6">
-              Can't find the answer you're looking for? Our customer support team
-              is here to help!
+              Can't find the answer you're looking for? Our customer support
+              team is here to help!
             </p>
             <a
               href="/contact"

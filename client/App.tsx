@@ -33,15 +33,27 @@ const App = () => (
           <Route path="/product/:id" element={<Product />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/checkout" element={<Checkout />} />
-          <Route path="/order-confirmation/:orderNumber" element={<OrderConfirmation />} />
+          <Route
+            path="/order-confirmation/:orderNumber"
+            element={<OrderConfirmation />}
+          />
           <Route path="/track-order/:orderNumber" element={<OrderTracking />} />
           <Route path="/about" element={<Placeholder pageName="About Us" />} />
           <Route path="/hair-care" element={<HairCareGuide />} />
           <Route path="/faqs" element={<FAQs />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/privacy" element={<Placeholder pageName="Privacy Policy" />} />
-          <Route path="/terms" element={<Placeholder pageName="Terms of Service" />} />
-          <Route path="/shipping-returns" element={<Placeholder pageName="Shipping & Returns" />} />
+          <Route
+            path="/privacy"
+            element={<Placeholder pageName="Privacy Policy" />}
+          />
+          <Route
+            path="/terms"
+            element={<Placeholder pageName="Terms of Service" />}
+          />
+          <Route
+            path="/shipping-returns"
+            element={<Placeholder pageName="Shipping & Returns" />}
+          />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

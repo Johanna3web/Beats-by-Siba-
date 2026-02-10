@@ -52,7 +52,7 @@ export async function getOrder(orderNumber: string): Promise<Order | null> {
 // Update order status
 export async function updateOrderStatus(
   orderNumber: string,
-  status: Order["status"]
+  status: Order["status"],
 ): Promise<Order | null> {
   const orders = await getOrCreateOrdersFile();
   const index = orders.findIndex((order) => order.orderNumber === orderNumber);

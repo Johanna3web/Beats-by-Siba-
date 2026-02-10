@@ -24,9 +24,7 @@ export default function OrderConfirmation() {
         setOrder(data);
       } catch (err) {
         setError(
-          err instanceof Error
-            ? err.message
-            : "Failed to load order details"
+          err instanceof Error ? err.message : "Failed to load order details",
         );
       } finally {
         setLoading(false);
@@ -175,11 +173,19 @@ export default function OrderConfirmation() {
                 <div className="border-t border-luxury-beige mt-8 pt-8">
                   <div className="flex justify-between mb-4">
                     <span className="text-foreground/70">Subtotal</span>
-                    <span className="font-semibold">R{order.subtotal.toLocaleString()}</span>
+                    <span className="font-semibold">
+                      R{order.subtotal.toLocaleString()}
+                    </span>
                   </div>
                   <div className="flex justify-between mb-4">
                     <span className="text-foreground/70">Shipping</span>
-                    <span className={order.shippingCost === 0 ? "text-luxury-gold font-semibold" : "font-semibold"}>
+                    <span
+                      className={
+                        order.shippingCost === 0
+                          ? "text-luxury-gold font-semibold"
+                          : "font-semibold"
+                      }
+                    >
                       {order.shippingCost === 0
                         ? "Free"
                         : `R${order.shippingCost.toLocaleString()}`}
@@ -187,7 +193,9 @@ export default function OrderConfirmation() {
                   </div>
                   <div className="flex justify-between mb-6 pb-6 border-b border-luxury-beige">
                     <span className="text-foreground/70">Tax</span>
-                    <span className="font-semibold">R{Math.round(order.tax).toLocaleString()}</span>
+                    <span className="font-semibold">
+                      R{Math.round(order.tax).toLocaleString()}
+                    </span>
                   </div>
                   <div className="flex justify-between text-lg">
                     <span className="font-bold text-foreground">Total</span>

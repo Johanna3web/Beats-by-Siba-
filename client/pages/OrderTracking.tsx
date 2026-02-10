@@ -21,7 +21,7 @@ export default function TrackOrder() {
 
     try {
       const response = await fetch(
-        `/api/orders/${orderNumber.toUpperCase()}/tracking`
+        `/api/orders/${orderNumber.toUpperCase()}/tracking`,
       );
 
       if (!response.ok) {
@@ -32,7 +32,7 @@ export default function TrackOrder() {
       setTracking(data);
     } catch (err) {
       setError(
-        err instanceof Error ? err.message : "Failed to retrieve tracking info"
+        err instanceof Error ? err.message : "Failed to retrieve tracking info",
       );
     } finally {
       setLoading(false);
@@ -157,7 +157,12 @@ export default function TrackOrder() {
                     <p className="text-foreground font-semibold">
                       {new Date(tracking.estimatedDelivery).toLocaleDateString(
                         "en-US",
-                        { weekday: "long", year: "numeric", month: "long", day: "numeric" }
+                        {
+                          weekday: "long",
+                          year: "numeric",
+                          month: "long",
+                          day: "numeric",
+                        },
                       )}
                     </p>
                   </div>
@@ -172,7 +177,10 @@ export default function TrackOrder() {
 
                 <div className="space-y-8">
                   {tracking.updates.map((update, index) => {
-                    const completed = isCompleted(update.status, tracking.status);
+                    const completed = isCompleted(
+                      update.status,
+                      tracking.status,
+                    );
                     const isLatest = index === tracking.updates.length - 1;
 
                     return (
@@ -181,9 +189,7 @@ export default function TrackOrder() {
                         {!isLatest && (
                           <div
                             className={`absolute left-3 top-12 w-0.5 h-12 ${
-                              completed
-                                ? "bg-luxury-gold"
-                                : "bg-foreground/10"
+                              completed ? "bg-luxury-gold" : "bg-foreground/10"
                             }`}
                           />
                         )}
@@ -218,7 +224,7 @@ export default function TrackOrder() {
                                   day: "numeric",
                                   hour: "2-digit",
                                   minute: "2-digit",
-                                }
+                                },
                               )}
                             </p>
                           </div>
@@ -261,8 +267,8 @@ export default function TrackOrder() {
           {!tracking && searched && !loading && (
             <div className="text-center py-16">
               <p className="text-lg text-foreground/70 mb-8">
-                No tracking information available. Please check your order number
-                and try again.
+                No tracking information available. Please check your order
+                number and try again.
               </p>
               <button
                 onClick={() => setSearched(false)}
@@ -286,7 +292,9 @@ export default function TrackOrder() {
           {loading && (
             <div className="text-center py-16">
               <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-luxury-gold mx-auto mb-4"></div>
-              <p className="text-foreground/70">Loading tracking information...</p>
+              <p className="text-foreground/70">
+                Loading tracking information...
+              </p>
             </div>
           )}
         </div>

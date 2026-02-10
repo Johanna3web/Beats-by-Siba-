@@ -109,8 +109,8 @@ export const Footer = () => {
           {/* Copyright */}
           <div className="text-center">
             <p className="text-sm text-background/70">
-              © {currentYear} Beats by Siba. Designed with confidence. All rights
-              reserved.
+              © {currentYear} Beats by Siba. Designed with confidence. All
+              rights reserved.
             </p>
           </div>
         </div>

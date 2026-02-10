@@ -1,9 +1,6 @@
 import { RequestHandler } from "express";
 import Stripe from "stripe";
-import {
-  CreateCheckoutRequest,
-  CreateCheckoutResponse,
-} from "@shared/api";
+import { CreateCheckoutRequest, CreateCheckoutResponse } from "@shared/api";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || "");
 
@@ -16,7 +13,10 @@ export const handleCheckout: RequestHandler<
     const { items, shippingAddress, shippingCost, tax } = req.body;
 
     // Calculate total
-    const subtotal = items.reduce((sum, item) => sum + item.price * item.quantity, 0);
+    const subtotal = items.reduce(
+      (sum, item) => sum + item.price * item.quantity,
+      0,
+    );
     const total = subtotal + shippingCost + tax;
 
     // Create Stripe Payment Intent

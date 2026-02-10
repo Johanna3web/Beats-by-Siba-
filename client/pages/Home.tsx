@@ -62,11 +62,11 @@ export default function Home() {
             </div>
 
             <p className="text-lg md:text-xl text-foreground/80 mb-8 max-w-2xl mx-auto leading-relaxed">
-              Hair Edition is all about premium, high quality hair made to elevate
-              your look. Our collections are carefully sourced for softness,
-              longevity, and a flawless natural finish. Whether you're going for
-              everyday beauty or full glam, our hair delivers luxury you can see
-              and feel.
+              Hair Edition is all about premium, high quality hair made to
+              elevate your look. Our collections are carefully sourced for
+              softness, longevity, and a flawless natural finish. Whether you're
+              going for everyday beauty or full glam, our hair delivers luxury
+              you can see and feel.
             </p>
 
             <p className="text-base md:text-lg text-foreground/60 mb-12 italic">

@@ -6,7 +6,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 const SENDER_EMAIL = process.env.SENDER_EMAIL || "orders@beatsbysiba.com";
 
 export async function sendOrderConfirmationEmail(
-  emailData: OrderConfirmationEmail
+  emailData: OrderConfirmationEmail,
 ): Promise<boolean> {
   try {
     const { to, orderNumber, order } = emailData;
@@ -20,7 +20,7 @@ export async function sendOrderConfirmationEmail(
         <td style="padding: 12px 0; text-align: center;">x${item.quantity}</td>
         <td style="padding: 12px 0; text-align: right;">R${(item.price * item.quantity).toLocaleString()}</td>
       </tr>
-    `
+    `,
       )
       .join("");
 

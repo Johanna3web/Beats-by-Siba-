@@ -32,7 +32,7 @@ export default function Cart() {
       return;
     }
     const updated = cartItems.map((item) =>
-      item.id === id ? { ...item, quantity } : item
+      item.id === id ? { ...item, quantity } : item,
     );
     saveCart(updated);
   };
@@ -44,7 +44,7 @@ export default function Cart() {
 
   const subtotal = cartItems.reduce(
     (sum, item) => sum + item.price * item.quantity,
-    0
+    0,
   );
 
   const shippingCost = subtotal > 0 ? (subtotal > 500 ? 0 : 50) : 0;
@@ -100,7 +100,9 @@ export default function Cart() {
                         <div className="flex items-center gap-4">
                           <div className="flex items-center border border-foreground/20">
                             <button
-                              onClick={() => updateQuantity(item.id, item.quantity - 1)}
+                              onClick={() =>
+                                updateQuantity(item.id, item.quantity - 1)
+                              }
                               className="p-2 hover:bg-luxury-beige transition-colors"
                             >
                               <Minus size={16} />
@@ -109,7 +111,9 @@ export default function Cart() {
                               {item.quantity}
                             </span>
                             <button
-                              onClick={() => updateQuantity(item.id, item.quantity + 1)}
+                              onClick={() =>
+                                updateQuantity(item.id, item.quantity + 1)
+                              }
                               className="p-2 hover:bg-luxury-beige transition-colors"
                             >
                               <Plus size={16} />
@@ -149,8 +153,12 @@ export default function Cart() {
                     </div>
                     <div className="flex justify-between text-foreground/70">
                       <span>Shipping</span>
-                      <span className={subtotal > 500 ? "text-luxury-gold" : ""}>
-                        {subtotal > 500 ? "Free" : `R${shippingCost.toLocaleString()}`}
+                      <span
+                        className={subtotal > 500 ? "text-luxury-gold" : ""}
+                      >
+                        {subtotal > 500
+                          ? "Free"
+                          : `R${shippingCost.toLocaleString()}`}
                       </span>
                     </div>
                     {subtotal > 500 && (

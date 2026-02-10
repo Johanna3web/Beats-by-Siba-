@@ -48,7 +48,7 @@ export default function Checkout() {
 
   const subtotal = cartItems.reduce(
     (sum, item) => sum + item.price * item.quantity,
-    0
+    0,
   );
   const shippingCost = subtotal > 500 ? 0 : 50;
   const tax = subtotal * 0.15;
@@ -113,7 +113,9 @@ export default function Checkout() {
       navigate(`/order-confirmation/${order.orderNumber}`);
     } catch (err) {
       setError(
-        err instanceof Error ? err.message : "An error occurred. Please try again."
+        err instanceof Error
+          ? err.message
+          : "An error occurred. Please try again.",
       );
       setIsProcessing(false);
     }
@@ -259,7 +261,9 @@ export default function Checkout() {
                         State *
                       </label>
                       <input
-                        {...register("state", { required: "State is required" })}
+                        {...register("state", {
+                          required: "State is required",
+                        })}
                         className="w-full px-4 py-2 border border-foreground/20 focus:outline-none focus:ring-2 focus:ring-luxury-gold"
                         placeholder="NY"
                       />
@@ -316,13 +320,14 @@ export default function Checkout() {
                     Payment Method
                   </h2>
                   <p className="text-sm text-foreground/70 mb-6">
-                    Stripe integration will be processed securely. This is a demo setup.
+                    Stripe integration will be processed securely. This is a
+                    demo setup.
                   </p>
 
                   <div className="bg-blue-50 border border-blue-200 p-4 rounded mb-6">
                     <p className="text-sm text-blue-800">
-                      💳 Demo Mode: Click "Complete Order" to simulate a successful
-                      payment and see your order confirmation.
+                      💳 Demo Mode: Click "Complete Order" to simulate a
+                      successful payment and see your order confirmation.
                     </p>
                   </div>
                 </div>
@@ -340,7 +345,9 @@ export default function Checkout() {
                   disabled={isProcessing}
                   className="w-full px-8 py-4 bg-foreground text-background font-bold tracking-widest text-sm uppercase hover:bg-luxury-gold hover:text-foreground disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 flex items-center justify-center gap-2"
                 >
-                  {isProcessing && <Loader2 size={20} className="animate-spin" />}
+                  {isProcessing && (
+                    <Loader2 size={20} className="animate-spin" />
+                  )}
                   {isProcessing ? "Processing..." : "Complete Order"}
                 </button>
               </form>
@@ -362,7 +369,9 @@ export default function Checkout() {
                       <span>
                         {item.name} x{item.quantity}
                       </span>
-                      <span>R{(item.price * item.quantity).toLocaleString()}</span>
+                      <span>
+                        R{(item.price * item.quantity).toLocaleString()}
+                      </span>
                     </div>
                   ))}
                 </div>
@@ -374,8 +383,12 @@ export default function Checkout() {
                   </div>
                   <div className="flex justify-between text-foreground/70">
                     <span>Shipping</span>
-                    <span className={shippingCost === 0 ? "text-luxury-gold" : ""}>
-                      {shippingCost === 0 ? "Free" : `R${shippingCost.toLocaleString()}`}
+                    <span
+                      className={shippingCost === 0 ? "text-luxury-gold" : ""}
+                    >
+                      {shippingCost === 0
+                        ? "Free"
+                        : `R${shippingCost.toLocaleString()}`}
                     </span>
                   </div>
                   <div className="flex justify-between text-foreground/70">
@@ -384,7 +397,9 @@ export default function Checkout() {
                   </div>
                   <div className="flex justify-between text-lg font-bold text-foreground pt-3 border-t border-luxury-beige">
                     <span>Total</span>
-                    <span className="text-luxury-gold">R{Math.round(total).toLocaleString()}</span>
+                    <span className="text-luxury-gold">
+                      R{Math.round(total).toLocaleString()}
+                    </span>
                   </div>
                 </div>
               </div>

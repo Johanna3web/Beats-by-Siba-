@@ -111,9 +111,7 @@ export default function Product() {
         <Header />
         <main className="flex-1 flex items-center justify-center">
           <div className="text-center">
-            <p className="text-lg text-foreground/70 mb-6">
-              Product not found
-            </p>
+            <p className="text-lg text-foreground/70 mb-6">Product not found</p>
             <Link
               to="/shop"
               className="inline-block px-8 py-3 bg-foreground text-background font-bold tracking-widest text-sm uppercase hover:bg-luxury-gold hover:text-foreground transition-all duration-300"
@@ -144,7 +142,7 @@ export default function Product() {
     const cartItems = existingCart ? JSON.parse(existingCart) : [];
 
     const existingItemIndex = cartItems.findIndex(
-      (item: CartItem) => item.id === product.id
+      (item: CartItem) => item.id === product.id,
     );
 
     if (existingItemIndex > -1) {

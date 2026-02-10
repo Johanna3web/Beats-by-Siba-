@@ -120,7 +120,7 @@ export default function Home() {
                     {product.category}
                   </p>
                   <p className="text-lg font-bold text-luxury-gold">
-                    {product.price}
+                    R{product.price.toLocaleString()}
                   </p>
                 </Link>
               ))}

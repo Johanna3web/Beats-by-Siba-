@@ -151,19 +151,19 @@ export async function sendOrderConfirmationEmail(
             <div class="summary">
               <div class="summary-row">
                 <span>Subtotal</span>
-                <span>$${order.subtotal.toFixed(2)}</span>
+                <span>R${order.subtotal.toLocaleString()}</span>
               </div>
               <div class="summary-row">
                 <span>Shipping</span>
-                <span>$${order.shippingCost.toFixed(2)}</span>
+                <span>R${order.shippingCost.toLocaleString()}</span>
               </div>
               <div class="summary-row">
                 <span>Tax</span>
-                <span>$${order.tax.toFixed(2)}</span>
+                <span>R${Math.round(order.tax).toLocaleString()}</span>
               </div>
               <div class="summary-row">
                 <span>Total</span>
-                <span>$${order.total.toFixed(2)}</span>
+                <span>R${Math.round(order.total).toLocaleString()}</span>
               </div>
             </div>
 

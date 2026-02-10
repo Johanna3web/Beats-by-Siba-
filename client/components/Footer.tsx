@@ -18,9 +18,9 @@ export const Footer = () => {
       { label: "Contact", href: "/contact" },
     ],
     Legal: [
-      { label: "Privacy Policy", href: "#" },
-      { label: "Terms of Service", href: "#" },
-      { label: "Shipping & Returns", href: "#" },
+      { label: "Privacy Policy", href: "/privacy" },
+      { label: "Terms of Service", href: "/terms" },
+      { label: "Shipping & Returns", href: "/shipping-returns" },
     ],
   };
 

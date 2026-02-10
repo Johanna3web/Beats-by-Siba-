@@ -36,9 +36,9 @@ const App = () => (
           <Route path="/order-confirmation/:orderNumber" element={<OrderConfirmation />} />
           <Route path="/track-order/:orderNumber" element={<OrderTracking />} />
           <Route path="/about" element={<Placeholder pageName="About Us" />} />
-          <Route path="/hair-care" element={<Placeholder pageName="Hair Care Guide" />} />
-          <Route path="/faqs" element={<Placeholder pageName="FAQs" />} />
-          <Route path="/contact" element={<Placeholder pageName="Contact" />} />
+          <Route path="/hair-care" element={<HairCareGuide />} />
+          <Route path="/faqs" element={<FAQs />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/privacy" element={<Placeholder pageName="Privacy Policy" />} />
           <Route path="/terms" element={<Placeholder pageName="Terms of Service" />} />
           <Route path="/shipping-returns" element={<Placeholder pageName="Shipping & Returns" />} />

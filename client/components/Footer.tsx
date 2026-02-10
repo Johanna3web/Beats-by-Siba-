@@ -42,7 +42,7 @@ export const Footer = () => {
               Beats by Siba
             </h3>
             <p className="text-sm text-background/80 mb-6">Hair Edition</p>
-            <div className="flex gap-4">
+            <div className="flex gap-4 mb-6">
               {socialLinks.map(({ icon: Icon, href, label }) => (
                 <a
                   key={label}
@@ -53,6 +53,32 @@ export const Footer = () => {
                   <Icon size={20} />
                 </a>
               ))}
+            </div>
+            <div className="space-y-3 text-sm">
+              <div className="flex gap-2 items-start text-background/80">
+                <Phone size={16} className="flex-shrink-0 mt-0.5" />
+                <div>
+                  <p className="text-background/60 text-xs">Phone</p>
+                  <a
+                    href="tel:+27647099067"
+                    className="hover:text-luxury-champagne transition-colors"
+                  >
+                    064 709 9067
+                  </a>
+                </div>
+              </div>
+              <div className="flex gap-2 items-start text-background/80">
+                <Mail size={16} className="flex-shrink-0 mt-0.5" />
+                <div>
+                  <p className="text-background/60 text-xs">Email</p>
+                  <a
+                    href="mailto:johannasegoapa@gmail.com"
+                    className="hover:text-luxury-champagne transition-colors text-sm"
+                  >
+                    johannasegoapa@gmail.com
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
 

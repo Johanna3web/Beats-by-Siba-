@@ -94,7 +94,7 @@ export default function Cart() {
                           {item.name}
                         </h3>
                         <p className="text-luxury-gold font-semibold mb-4">
-                          ${item.price.toFixed(2)}
+                          R{item.price.toLocaleString()}
                         </p>
 
                         <div className="flex items-center gap-4">

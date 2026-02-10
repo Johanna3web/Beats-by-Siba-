@@ -13,6 +13,9 @@ import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
 import OrderConfirmation from "./pages/OrderConfirmation";
 import OrderTracking from "./pages/OrderTracking";
+import FAQs from "./pages/FAQs";
+import HairCareGuide from "./pages/HairCareGuide";
+import Contact from "./pages/Contact";
 import Placeholder from "./pages/Placeholder";
 import NotFound from "./pages/NotFound";
 

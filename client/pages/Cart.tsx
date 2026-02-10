@@ -127,7 +127,7 @@ export default function Cart() {
 
                       <div className="text-right">
                         <p className="text-lg font-bold text-foreground">
-                          ${(item.price * item.quantity).toFixed(2)}
+                          R{(item.price * item.quantity).toLocaleString()}
                         </p>
                       </div>
                     </div>

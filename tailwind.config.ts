@@ -57,6 +57,17 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        luxury: {
+          cream: "hsl(var(--luxury-cream))",
+          beige: "hsl(var(--luxury-beige))",
+          nude: "hsl(var(--luxury-nude))",
+          champagne: "hsl(var(--luxury-champagne))",
+          gold: "hsl(var(--luxury-gold))",
+        },
+      },
+      fontFamily: {
+        sans: ["Inter", "sans-serif"],
+        display: ["Playfair Display", "serif"],
       },
       borderRadius: {
         lg: "var(--radius)",

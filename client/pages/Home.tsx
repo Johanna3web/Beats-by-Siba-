@@ -5,32 +5,36 @@ import { Footer } from "@/components/Footer";
 export default function Home() {
   const featuredProducts = [
     {
-      id: 1,
-      name: "Luxury Wave Bundle",
-      category: "Bundles",
-      price: "$299",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop",
-    },
-    {
-      id: 2,
-      name: "Silk Closure",
-      category: "Closures",
-      price: "$179",
-      image: "https://images.unsplash.com/photo-1502449871298-f8122fdf96b8?w=400&h=500&fit=crop",
-    },
-    {
-      id: 3,
-      name: "Premium Frontal",
-      category: "Frontals",
-      price: "$249",
-      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=500&fit=crop",
-    },
-    {
-      id: 4,
-      name: "Ombre Wave Wig",
+      id: "1",
+      name: "Luxury Wave Wig",
       category: "Wigs",
-      price: "$349",
-      image: "https://images.unsplash.com/photo-1516575334481-f410a007b9fd?w=400&h=500&fit=crop",
+      price: 1400,
+      image:
+        "https://cdn.builder.io/api/v1/image/assets%2Fd25120501a4543f48a86c5a6177513db%2F41706eba63d840329f095a5a7c8f8b6d?format=webp&width=800&height=1200",
+    },
+    {
+      id: "2",
+      name: "Body Wave Collection",
+      category: "Wigs",
+      price: 1800,
+      image:
+        "https://cdn.builder.io/api/v1/image/assets%2Fd25120501a4543f48a86c5a6177513db%2F5f6dfc8fba804577a13caa8bf14ff37d?format=webp&width=800&height=1200",
+    },
+    {
+      id: "5",
+      name: "Curly Crown Wig",
+      category: "Wigs",
+      price: 2100,
+      image:
+        "https://cdn.builder.io/api/v1/image/assets%2Fd25120501a4543f48a86c5a6177513db%2Fd3aaa19d36544854b30082dbae88b145?format=webp&width=800&height=1200",
+    },
+    {
+      id: "6",
+      name: "Blonde Bombshell",
+      category: "Wigs",
+      price: 2500,
+      image:
+        "https://cdn.builder.io/api/v1/image/assets%2Fd25120501a4543f48a86c5a6177513db%2F47c9539baf284d66ab6cd9a6c8004184?format=webp&width=800&height=1200",
     },
   ];
 
